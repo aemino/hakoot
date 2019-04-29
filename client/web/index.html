@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="scaffolded-by" content="https://github.com/google/stagehand">
+    <title>hakoot!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+    <script defer src="main.dart.js"></script>
+</head>
+
+<body>
+
+  <div id="header">
+    <h1>hakoot!</h1>
+  </div>
+
+  <div class="view view-pin template" id="view-pin">
+    <h2>enter game PIN</h2>
+    <input id="pin-input" maxlength="6"></input>
+  </div>
+
+  <div class="view view-lobby template" id="view-lobby">
+    <h3>you are</h3>
+    <h2 id="display-name">???</h2>
+    <br>
+    <h4>waiting for game to begin...</h4>
+  </div>
+
+  <div class="view view-round template" id="view-round">
+    <h3>suggest an answer</h3>
+    <input id="answer-input" style="width: 12em;"></input>
+    <br>
+    <button id="submit-button">submit</button>
+    <br>
+    <span style="font-weight: 100;">funds </span>
+    <span id="funds"></span>
+    &nbsp;
+    <span style="font-weight: 100;">total bet </span>
+    <span id="bets"></span>
+    <br>
+    <div id="answer-list"></div>
+  </div>
+
+  <div class="view view-intermission template" id="view-intermission">
+    <h3 id="funds-delta-header"></h3>
+    <h2 id="funds-delta"></h2>
+    <h4>waiting for the next round to start...</h4>
+  </div>
+
+  <div class="view view-results template" id="view-results">
+    <h3>thanks for playing! you were in</h3>
+    <h2 id="place"></h2>
+  </div>
+
+  <div class="view view-host-create template" id="view-host-create">
+    <h2>enter trivia template</h2>
+    <textarea id="template-input" rows="16" cols="96"></textarea>
+    <br>
+    <button id="done-button">done</button>
+  </div>
+
+  <div class="view view-host-lobby template" id="view-host-lobby">
+    <h2>to join the game, use this PIN</h2>
+    <h1 id="game-pin">??????</h1>
+    <br>
+    <div id="player-list"></div>
+    <br>
+    <button id="start-button">start</button>
+  </div>
+
+  <div class="view view-round template" id="view-host-round">
+    <h2 id="round-question">?</h2>
+    <h3 id="round-timer"></h3>
+    <br>
+    <div id="answer-list"></div>
+  </div>
+
+  <div class="view view-host-intermission template" id="view-host-intermission">
+    <h3>the correct answer was</h3>
+    <h2 id="answer"></h2>
+
+    <div id="leaderboard" class="leaderboard"></div>
+    <br>
+
+    <button id="next-button">next</button>
+  </div>
+
+  <div class="view view-host-results template" id="view-host-results">
+    <h3>game over! your winner is</h3>
+    <h2 id="winner-name"></h2>
+    <h4>they would make a great investor... or something</h4>
+    
+    <div id="leaderboard" class="leaderboard"></div>
+  </div>
+
+</body>
+</html>

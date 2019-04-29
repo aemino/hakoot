@@ -1,0 +1,196 @@
+@import url(https://fonts.googleapis.com/css?family=Londrina+Solid:100,300,400,900);
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Londrina Solid', sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 400;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 300;
+}
+
+#header {
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  font-family: 'Londrina Solid';
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 0.25em 0.75em;
+  margin: 16px;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 4px;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+input {
+  padding: 6px;
+  font-size: 16px;
+  text-align: center;
+  width: 6em;
+  border-radius: 4px;
+  border: 2px solid #333333;
+  padding: 0.5em;
+  transition: border-color 1s;
+}
+
+input.failure {
+  border-color: #dd4444;
+}
+
+input.success {
+  border-color: #44dd44;
+}
+
+/* BASE VIEW */
+
+@keyframes view-transition-in {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes view-transition-out {
+  from {}
+  to {
+    transform: translateX(-100vw);
+    display: none;
+  }
+}
+
+.view.template {
+  display: none;
+}
+
+.view {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  animation: view-transition-out 1s ease-in-out forwards;
+}
+
+.view.active {
+  animation: view-transition-in 1s ease-in-out forwards;
+}
+
+/* PIN VIEW */
+
+.view-pin {
+}
+
+/* LOBBY VIEW */
+
+.view-lobby {
+}
+
+.view-host-lobby #player-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 15%;
+}
+
+.view-host-lobby #player-list span {
+  padding: 8px;
+  width: 200px;
+  flex-basis: 30%;
+}
+
+/* ROUND VIEW */
+
+.view-round #answer-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1em;
+  margin: 0 15%;
+}
+
+.view-round #submit-button {
+  font-size: 1em;
+}
+
+.view-round .game-answer {
+  margin: 1em;
+  padding: 1em;
+
+  border: 2px solid #000000;
+  border-radius: 4px;
+
+  flex-basis: 30%;
+}
+
+.view-round .game-answer button {
+  font-size: 0.75em;
+  display: inline-block;
+  margin: 0.25em;
+}
+
+/* RESULTS VIEW */
+
+.leaderboard {
+  display: flex;
+  justify-content: center;
+}
+
+.leaderboard table {
+  width: 40%;
+}
+
+.leaderboard th:nth-child(1), .leaderboard td:nth-child(1) {
+  text-align: left;
+}
+
+.leaderboard th:nth-child(2), .leaderboard td:nth-child(2) {
+  text-align: left;
+}
+
+.leaderboard th:nth-child(3), .leaderboard td:nth-child(3) {
+  text-align: right;
+}
+
+.leaderboard td {
+  font-weight: 100;
+}

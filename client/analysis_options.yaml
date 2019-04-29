@@ -1,0 +1,4 @@
+analyzer:
+  exclude: build/**
+
+include: package:style_genshu/analysis_options.yaml
